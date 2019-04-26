@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package multiuserchatroom;
 
-/**
- *
- * @author NancyAlarabawy
- */
 import java.io.*;
 import java.net.*;
 import java.util.*;
@@ -93,7 +84,7 @@ public class Client extends Thread {
                                     if (threads[i] != null && threads[i] != this
                                             && threads[i].clientName != null
                                             && threads[i].clientName.equals(words[0])) {
-                                        threads[i].outStream.println("<" + username + "> @" + threads[i].clientName + " " + words[1]);
+                                        threads[i].outStream.println("<" + username + "> " + threads[i].clientName + " " + words[1]);
                                         //Echoing msg to user to confirm it was sent privately
                                         this.outStream.println(">" + username + "> " + threads[i].clientName + " " + words[1]);
                                         break;
@@ -122,7 +113,7 @@ public class Client extends Thread {
                     }
                 }
             }
-            outStream.println("** GoodBye " + username + " **");
+            outStream.println("** Good Bye " + username + " **");
 
             synchronized (this) {
                 for (int i = 0; i < maxClientsCount; i++) {
@@ -140,3 +131,4 @@ public class Client extends Thread {
         }
     }
 }
+

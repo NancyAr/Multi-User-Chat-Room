@@ -1,6 +1,9 @@
 # Multi-User-Chat-Room
 A Multi user chat room using Network programming and JavaSwing.
 
+Used IDE: Net Beans
+Used Language: Java
+
 To start: 1- Run Starter class. Choose "Server".
           2- Run Starter class again but this time choose "Client". Note: You can run up to 10 clients. 
           3- Follow instructions given in chatbox: * Enter name or /leave to quit

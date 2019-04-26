@@ -414,7 +414,7 @@ public class ChatRoom {
                         String timestamp = new SimpleDateFormat("HH:mm:ss").format(new Date());
                         String text = words[0] + " [" + timestamp + "]:";
                         //Color code for private messages is purple
-                        if (finalArg.toString().indexOf(" @ ") != -1) {
+                        if (finalArg.toString().indexOf("@") != -1) {
                             StyleConstants.setForeground(keyWord, PURPLE);
                             i = 2;
                         }
@@ -489,14 +489,10 @@ public class ChatRoom {
                                         break;
                                     }
                                 }
-                                if (finalArg.toString().indexOf(" p ") != -1) {
+                                if (finalArg.toString().indexOf("@") != -1) {
                                     doc.insertString(doc.getLength(), " " + words[i] + " ", keyWord);
                                 } else {
                                     doc.insertString(doc.getLength(), " " + words[i] + " ", null);
-                                    for (int lol = 0; lol <= idx; lol++) {
-                                        System.out.println(username[lol] + lol + idx);
-                                    }
-                                    System.out.println(idx);
                                     r++;
                                 }
 
@@ -542,3 +538,4 @@ public class ChatRoom {
         }
     }
 }
+
